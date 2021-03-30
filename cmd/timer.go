@@ -40,6 +40,9 @@ func init() {
 }
 
 func gemitTimer(args []string) {
+	log.SetPrefix("gemit: ")
+	log.SetFlags(0)
+
 	if len(args) != 1 {
 		log.Fatal(notEnoughArgumentMessage)
 	}
