@@ -16,7 +16,8 @@ var cfgFile string
 var rootCmd = &cobra.Command{
 	Use:   "gemit",
 	Short: "A CLI timer written in go",
-	Long:  `Gemit is a CLI timer written in go.`,
+	Long: `Gemit is a CLI application written in go that is a timer.
+	this application is a tool to start a new timer that can be of multiple durations.`,
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
