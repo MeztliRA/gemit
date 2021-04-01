@@ -5,6 +5,7 @@ import (
 	"log"
 	"time"
 
+	"github.com/gen2brain/beeep"
 	"github.com/spf13/cobra"
 )
 
@@ -55,4 +56,9 @@ func gemitTimer(args []string) {
 	fmt.Println(timerStartedMessage)
 	<-timer.C
 	fmt.Println(timerDoneMessage)
+	// no icon is just a placeholder so that beeep doesnt use a icon
+	notificationErr := beeep.Notify("Gemit", timerDoneMessage, "no icon")
+	if notificationErr != nil {
+		log.Fatal(notificationErr)
+	}
 }
