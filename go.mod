@@ -3,7 +3,7 @@ module github.com/MeztliRA/gemit
 go 1.16
 
 require (
-	github.com/gen2brain/beeep v0.0.0-20200526185328-e9c15c258e28 // indirect
+	github.com/gen2brain/beeep v0.0.0-20200526185328-e9c15c258e28
 	github.com/godbus/dbus/v5 v5.0.4 // indirect
 	github.com/gopherjs/gopherjs v0.0.0-20210202160940-bed99a852dfe // indirect
 	github.com/mitchellh/go-homedir v1.1.0
