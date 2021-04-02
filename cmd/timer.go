@@ -10,7 +10,7 @@ import (
 )
 
 const (
-	timerStartedMessage      = "timer started!"
+	timerStartedMessage      = "timer started!\n"
 	timerDoneMessage         = "timer done!"
 	notEnoughArgumentMessage = "timer: to many or not enough argument"
 )
