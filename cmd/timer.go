@@ -12,7 +12,8 @@ import (
 const (
 	timerStartedMessage      = "timer started!\n"
 	timerDoneMessage         = "timer done!"
-	notEnoughArgumentMessage = "timer: to many or not enough argument"
+	notEnoughArgumentMessage = "timer: not enough argument"
+	tooManyArgumentMessage   = "timer: to many argument"
 )
 
 // timerCmd represents the timer command
@@ -34,8 +35,10 @@ func gemitTimer(args []string) {
 	log.SetPrefix("gemit: ")
 	log.SetFlags(0)
 
-	if len(args) != 1 {
+	if len(args) < 1 {
 		log.Fatal(notEnoughArgumentMessage)
+	} else if len(args) > 1 {
+		log.Fatal(tooManyArgumentMessage)
 	}
 	inputtedDuration := args[0]
 	duration, err := time.ParseDuration(inputtedDuration)
