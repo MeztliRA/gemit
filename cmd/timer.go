@@ -49,7 +49,7 @@ func gemitTimer(args []string) {
 	fmt.Println(timerStartedMessage)
 	<-timer.C
 	fmt.Println(timerDoneMessage)
-	// no icon is just a placeholder so that beeep doesnt use a icon
+	// no icon is just a placeholder so that beeep doesnt find a icon to use
 	notificationErr := beeep.Notify("Gemit", timerDoneMessage, "no icon")
 	if notificationErr != nil {
 		log.Fatal(notificationErr)
